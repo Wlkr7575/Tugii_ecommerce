@@ -1,0 +1,11 @@
+const express = require('express')
+const router = express.Router()
+const subroutes = require('./subindex')
+router.use('/user',subroutes.user)
+router.use('/product',subroutes.product)
+router.use('/brand',subroutes.brand)
+router.use('/type',subroutes.category)
+router.use('/colors',subroutes.color)
+router.use('/order',subroutes.order)
+router.use('/token',subroutes.token)
+module.exports = router

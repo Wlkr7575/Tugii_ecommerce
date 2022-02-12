@@ -1,0 +1,12 @@
+const express = require('express')
+const upload = require('../lib/upload')
+const {controller} = require('../controller')
+const router = express.Router()
+router.get('/',controller.order.get)
+router.get('/get/:id',controller.order.getbyId)
+router.post('/',controller.order.create)
+router.patch('/:id',controller.order.update)
+router.delete('/:id',controller.order.remove)
+router.get('/myorders/:id',controller.order.myOrders)
+router.post('/test/:id',controller.order.test)
+module.exports = router
